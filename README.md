@@ -3,9 +3,13 @@
   - create React app
   - Configured TailwindCSS
   - Header
+  - Routing configuration for App
   - Login Form 
   - SignUp Form
-
+  - Form Validation
+  - FireBase SetUp
+  - Creating SingUp user feature using above form
+  - Created redux store with userSlice
 # Features
   - Login/SignUp
     - SignIn/ SignUp Form
