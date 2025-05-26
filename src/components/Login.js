@@ -12,14 +12,13 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebaseconfig";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { backgroundImage, userIconNetflix } from "../utils/constants";
 
 const Login = () => {
   const [isSignUp, setIsSignUp] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const email = useRef(null);
   const password = useRef(null);
@@ -48,8 +47,7 @@ const Login = () => {
 
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL:
-              "https://avatars.githubusercontent.com/u/178911306?s=400&v=4",
+            photoURL:userIconNetflix,
           })
             .then(() => {
               // Profile updated!
@@ -62,7 +60,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
               //console.log(user);
               // ...
             })
@@ -89,8 +86,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          navigate("/browse");
-          console.log(user);
+          //console.log(user);
           // ...
         })
         .catch((error) => {
@@ -105,7 +101,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={backgroundImage}
           alt="background image"
         />
       </div>

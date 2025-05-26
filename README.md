@@ -10,6 +10,7 @@
   - FireBase SetUp
   - Creating SingUp user feature using above form
   - Created redux store with userSlice
+  - Fetch movies from TMDB Movies API
 # Features
   - Login/SignUp
     - SignIn/ SignUp Form
