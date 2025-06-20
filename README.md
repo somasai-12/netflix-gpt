@@ -11,6 +11,7 @@
   - Creating SingUp user feature using above form
   - Created redux store with userSlice
   - Fetch movies from TMDB Movies API
+  - GPT Search Feature
 # Features
   - Login/SignUp
     - SignIn/ SignUp Form
