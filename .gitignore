@@ -25,3 +25,5 @@ yarn-error.log*
 
 src/utils/constants.js
 src/utils/firebaseconfig.js
+.firebase/
+*.cache
